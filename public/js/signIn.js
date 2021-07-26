@@ -7,6 +7,7 @@ signInButton.addEventListener("click", () => {
     firebase.auth().signInWithPopup(provider).then(result => {
         const user = result.user
         console.log("log in succes!", user)
+        window.location = "writeNote.html"
     })
     .catch(error => {
         console.log("log in failed", error)
